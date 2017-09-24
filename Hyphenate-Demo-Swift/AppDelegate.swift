@@ -9,7 +9,9 @@
 import UIKit
 import Hyphenate
 import UserNotifications
+import XCGLogger
 
+let xcgLogger = XCGLogger.default
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, EMClientDelegate {
@@ -52,8 +54,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         window?.makeKeyAndVisible()
         
         parseApplication(application, didFinishLaunchingWithOptions: launchOptions)
-        _registerAPNS()     
-        
+        _registerAPNS()
+                
         return true
     }
  
@@ -73,8 +75,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         EMClient.shared().applicationDidEnterBackground(application)     
     }
 
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        EMClient.shared().applicationWillEnterForeground(application)     
+    func applicationWillEnterForeground(_ application: UIApplication) {        
+        EMClient.shared().applicationWillEnterForeground(application)
     }
  
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {

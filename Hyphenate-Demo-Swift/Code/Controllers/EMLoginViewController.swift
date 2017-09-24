@@ -27,7 +27,26 @@ class EMLoginViewController: UIViewController, UITextFieldDelegate {
         setBackgroundColor()
         setupUI()
         setupForDismissKeyboard()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(noti:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)  
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(noti:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        
+        let ba = BiometricsAuthentication()
+        if ba.isAvailable() {
+            ba.authenticate(completion: { (error: Error?) in
+                if (error == nil) {
+                    DispatchQueue.main.async {
+                        self.populateLoginCredentials()
+                        self.doLogin(nil)
+                    }
+                }
+            })
+        }
+    }
+    
+    func populateLoginCredentials() {
+        if let loginCredentials = UserCredentials.instance.getLoginCredentials() {
+            usernameTextField.text = loginCredentials.username
+            passwordTextField.text = loginCredentials.password
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +67,7 @@ class EMLoginViewController: UIViewController, UITextFieldDelegate {
         loginButton.width(width: kScreenWidth)  
         
         signupButton.top(top: kScreenHeight - signupButton.height())  
-        signupButton.width(width: kScreenWidth)  
+        signupButton.width(width: kScreenWidth)
     }
     
     func setBackgroundColor () {
@@ -71,6 +90,8 @@ class EMLoginViewController: UIViewController, UITextFieldDelegate {
             MBProgressHUD.hide(for: weakSelf?.view, animated: true)
             
             if error == nil {
+                UserCredentials.instance.save(username: self.usernameTextField.text!, password: self.passwordTextField.text!)
+                
                 EMClient.shared().options.isAutoLogin = true  
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue:KNOTIFICATION_LOGINCHANGE), object: NSNumber(value: true))  
             } else {
