@@ -21,16 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         UITabBar.appearance().tintColor = KermitGreenTwoColor
         UINavigationBar.appearance().tintColor = AlmostBlackColor
         
-        let options = EMOptions.init(appkey: "hyphenatedemo#hyphenatedemo")     
+        let options = EMOptions.init(appkey: "1501170808009032#bizcardapp")
         
-        var apnsCerName = ""     
-        #if DEBUG
-            apnsCerName = "DevelopmentCertificate"     
-        #else
-            apnsCerName = "ProductionCertificate"     
-        #endif
+//        var apnsCerName = ""     
+//        #if DEBUG
+//            apnsCerName = "DevelopmentCertificate"     
+//        #else
+//            apnsCerName = "ProductionCertificate"     
+//        #endif
         
-        options?.apnsCertName = apnsCerName     
+        options?.apnsCertName = "BizcardDevCert"
         options?.enableConsoleLog = true     
         options?.isDeleteMessagesWhenExitGroup = false     
         options?.isDeleteMessagesWhenExitChatRoom = false     
@@ -78,7 +78,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
  
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        EMClient.shared().registerForRemoteNotifications(withDeviceToken: deviceToken, completion: nil)
+        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        print("didRegisterForRemoteNotificationsWithDeviceToken: \(deviceTokenString)")
+        
+        //Synchronization method will block the current thread
+        //EMClient.shared().bindDeviceToken(deviceToken)
+        
+        EMClient.shared().registerForRemoteNotifications(withDeviceToken: deviceToken) { aError in
+            if let aError = aError {
+                print("didRegisterForRemoteNotificationsWithDeviceToken error: \(aError.errorDescription)")
+            }
+        }
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("didFailToRegisterForRemoteNotificationsWithError \(error)")
     }
     
     fileprivate func _registerAPNS() {

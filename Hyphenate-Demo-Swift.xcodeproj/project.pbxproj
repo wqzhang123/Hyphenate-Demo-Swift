@@ -1620,7 +1620,7 @@
 				TargetAttributes = {
 					9011DF401EEEBEA400C43D05 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = ZHZ4TMESQ4;
+						DevelopmentTeam = CMSV723QDH;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -2230,7 +2230,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Hyphenate-Demo-Swift/Hyphenate-Demo-Swift.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZHZ4TMESQ4;
+				DEVELOPMENT_TEAM = CMSV723QDH;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Hyphenate-Demo-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2240,7 +2240,7 @@
 					"$(PROJECT_DIR)/Hyphenate-Demo-Swift/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/Hyphenate-Demo-Swift/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.hyphenate.demo.im;
+				PRODUCT_BUNDLE_IDENTIFIER = BizcardApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Hyphenate-Demo-Swift/Code/Utilities/Hyphenate-Bridge-Header.h";
@@ -2255,7 +2255,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Hyphenate-Demo-Swift/Hyphenate-Demo-Swift.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZHZ4TMESQ4;
+				DEVELOPMENT_TEAM = CMSV723QDH;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Hyphenate-Demo-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2265,7 +2265,7 @@
 					"$(PROJECT_DIR)/Hyphenate-Demo-Swift/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/Hyphenate-Demo-Swift/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.hyphenate.demo.im;
+				PRODUCT_BUNDLE_IDENTIFIER = BizcardApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Hyphenate-Demo-Swift/Code/Utilities/Hyphenate-Bridge-Header.h";
