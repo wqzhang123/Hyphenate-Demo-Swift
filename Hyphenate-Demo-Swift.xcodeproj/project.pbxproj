@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63115F4D1F794A5B0023154B /* BiometricsAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63115F4C1F794A5B0023154B /* BiometricsAuthentication.swift */; };
 		635FCBD91F78268900B9D476 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FCBD81F78268900B9D476 /* UserCredentials.swift */; };
 		635FCBE21F782F7400B9D476 /* Hyphenate_Demo_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FCBE11F782F7400B9D476 /* Hyphenate_Demo_SwiftTests.swift */; };
 		635FCBEC1F78308000B9D476 /* UserCredentialsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FCBEB1F78308000B9D476 /* UserCredentialsTest.swift */; };
@@ -14,7 +15,6 @@
 		635FCBF21F7831F500B9D476 /* DACircularProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635FCBEE1F7831F500B9D476 /* DACircularProgress.framework */; };
 		635FCBF31F7831F500B9D476 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635FCBEF1F7831F500B9D476 /* MBProgressHUD.framework */; };
 		635FCBF41F7831F500B9D476 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635FCBF01F7831F500B9D476 /* SDWebImage.framework */; };
-		635FCBF61F7838D400B9D476 /* BiometricsAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FCBF51F7838D400B9D476 /* BiometricsAuthentication.swift */; };
 		635FCBF91F783B7E00B9D476 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635FCBF71F783B7E00B9D476 /* ObjcExceptionBridging.framework */; };
 		635FCBFA1F783B7E00B9D476 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635FCBF81F783B7E00B9D476 /* XCGLogger.framework */; };
 		672BE66FDFF04D2E7D8741AD /* Pods_Hyphenate_Demo_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C955AB940CDDDC270F02086 /* Pods_Hyphenate_Demo_Swift.framework */; };
@@ -416,6 +416,7 @@
 /* Begin PBXFileReference section */
 		299C482D5D0A4D8D7E358C06 /* Pods-Hyphenate-Demo-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hyphenate-Demo-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hyphenate-Demo-Swift/Pods-Hyphenate-Demo-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		2C955AB940CDDDC270F02086 /* Pods_Hyphenate_Demo_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hyphenate_Demo_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63115F4C1F794A5B0023154B /* BiometricsAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BiometricsAuthentication.swift; path = Bizcard/BiometricsAuthentication.swift; sourceTree = "<group>"; };
 		635FCBD81F78268900B9D476 /* UserCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCredentials.swift; path = Bizcard/UserCredentials.swift; sourceTree = "<group>"; };
 		635FCBDF1F782F7400B9D476 /* Hyphenate-Demo-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hyphenate-Demo-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		635FCBE11F782F7400B9D476 /* Hyphenate_Demo_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hyphenate_Demo_SwiftTests.swift; sourceTree = "<group>"; };
@@ -425,7 +426,6 @@
 		635FCBEE1F7831F500B9D476 /* DACircularProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DACircularProgress.framework; path = build/Debug/DACircularProgress.framework; sourceTree = "<group>"; };
 		635FCBEF1F7831F500B9D476 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = build/Debug/MBProgressHUD.framework; sourceTree = "<group>"; };
 		635FCBF01F7831F500B9D476 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = build/Debug/SDWebImage.framework; sourceTree = "<group>"; };
-		635FCBF51F7838D400B9D476 /* BiometricsAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricsAuthentication.swift; sourceTree = "<group>"; };
 		635FCBF71F783B7E00B9D476 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjcExceptionBridging.framework; path = Carthage/Build/iOS/ObjcExceptionBridging.framework; sourceTree = "<group>"; };
 		635FCBF81F783B7E00B9D476 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		9011DF411EEEBEA400C43D05 /* Hyphenate-Demo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hyphenate-Demo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -878,8 +878,8 @@
 		635FCBD71F78262D00B9D476 /* Bizcard */ = {
 			isa = PBXGroup;
 			children = (
+				63115F4C1F794A5B0023154B /* BiometricsAuthentication.swift */,
 				635FCBD81F78268900B9D476 /* UserCredentials.swift */,
-				635FCBF51F7838D400B9D476 /* BiometricsAuthentication.swift */,
 			);
 			name = Bizcard;
 			sourceTree = "<group>";
@@ -2175,6 +2175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63115F4D1F794A5B0023154B /* BiometricsAuthentication.swift in Sources */,
 				9080EDE01F03896E00B6C488 /* EMAddContactViewController.swift in Sources */,
 				90C00C7C1EEFA95B0049BFAD /* EMLoginViewController.swift in Sources */,
 				9011DF451EEEBEA400C43D05 /* AppDelegate.swift in Sources */,
@@ -2241,7 +2242,6 @@
 				90F3DC3A1F02125700DEBB86 /* EMApplyManager.swift in Sources */,
 				9084622D1EF7754F0008E480 /* EMMessageModel.swift in Sources */,
 				90F9B7231F04F00500513DC1 /* EMContactInfoViewController.swift in Sources */,
-				635FCBF61F7838D400B9D476 /* BiometricsAuthentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2462,6 +2462,7 @@
 				635FCBE81F782F7500B9D476 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9011DF3C1EEEBEA400C43D05 /* Build configuration list for PBXProject "Hyphenate-Demo-Swift" */ = {
 			isa = XCConfigurationList;
